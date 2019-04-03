@@ -41,7 +41,7 @@ var paths = {
         dest: 'languages/bootstrap-for-genesis.pot'
     },
     site: {
-        url: 'http://bootstrap.test'
+        url: 'http://uamshealthmu.local'
     }
 }
 
