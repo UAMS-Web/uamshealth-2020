@@ -1,6 +1,239 @@
 /* Variables
 ------------------------------------------------------------ */
 
+// Color system
+
+$red: #9D2235; // UAMS Red
+$red-darkest: #7b1d2a;
+$red-dark: #8d1f30;
+$red-light: #ad253a;
+$red-lightest: #bd2940;
+$red-special: #C61029;
+
+$green: #229d4d;
+$green-darkest: #186d35;
+$green-darker: #1b7d3d;
+$green-dark: #1f8d45;
+$green-light: #25ad55;
+$green-lighter: #29bd5d;
+$green-lightest: #2ccd65;
+
+$blue: #22739d;
+$blue-darkest: #18506d;
+$blue-darker: #1b5b7d;
+$blue-dark: #1f678d;
+$blue-light: #257fad;
+$blue-lighter: #298bbd;
+$blue-lightest: #2c96cd;
+
+$dark-blue: #1A365C;
+$dark-blue-darkest: #0d1b2e;
+$dark-blue-darker: #11243d;
+$dark-blue-dark: #162d4d;
+$dark-blue-light: #1e3f6b;
+$dark-blue-lighter: #23487b;
+$dark-blue-lightest: #27518a;
+
+$teal: #427F81;
+$teal-darkest: #2e595a;
+$teal-darker: #356567;
+$teal-dark: #3b7274;
+$teal-light: #498c8e;
+$teal-lighter: #4f999b;
+$teal-lightest: #56a5a8;
+
+$eggplant: #701D45;
+$eggplant-darkest: #411128;
+$eggplant-darker: #511532;
+$eggplant-dark: #60193b;
+$eggplant-light: #80214f;
+$eggplant-lighter: #8f2558;
+$eggplant-lightest: #9f2962;
+
+$maroon: #6C0020;
+$maroon-darkest: #31000f;
+$maroon-darker: #450014;
+$maroon-dark: #58001a;
+$maroon-light: #800026;
+$maroon-lighter: #93002c;
+$maroon-lightest: #a70031;
+
+$orange: #CA4C1D;
+$orange-darkest: #973916;
+$orange-darker: #a83f18;
+$orange-dark: #b9461b;
+$orange-light: #db521f;
+$orange-lighter: #e15e2d;
+$orange-lightest: #e36b3e;
+$orange-special: #ec7330;
+
+$yellow:  #ffb81c;
+
+$steel: #597286;
+
+//$indigo:  #6610f2;
+
+//$purple:  #6f42c1;
+
+//$pink:    #e83e8c;
+
+//$cyan:    #17a2b8;
+
+$gray-50: #FAF8F9; // Lightest
+$gray-100: #F5F3F4; // Lighter
+$gray-200: #F0EEEF; // Light
+$gray-300: #DCDADB; // Accent
+$gray-400: #A9A7A8;
+$gray-500: #908E8F;
+$gray-600: #767475;
+$gray-700: #5D5B5C; // Dark
+$gray-800: #434142; // Darker
+$gray-900: #212121; // Base & Text
+
+$colors: (
+  "green-darkest": $green-darkest,
+  "green-darker": $green-darker,
+  "green-dark": $green-dark,
+  "green-light": $green-light,
+  "green-lighter": $green-lighter,
+  "green-lightest": $green-lightest,
+  "blue-darkest": $blue-darkest,
+  "blue-darker": $blue-darker,
+  "blue-dark": $blue-dark,
+  "blue-light": $blue-light,
+  "blue-lighter": $blue-lighter,
+  "blue-lightest": $blue-lightest,
+  "dark-blue": $dark-blue,
+  "dark-blue-darkest": $dark-blue-darkest,
+  "dark-blue-darker": $dark-blue-darker,
+  "dark-blue-dark": $dark-blue-dark,
+  "dark-blue-light": $dark-blue-light,
+  "dark-blue-lighter": $dark-blue-lighter,
+  "dark-blue-lightest": $dark-blue-lightest,
+  "teal-darkest": $teal-darkest,
+  "teal-darker": $teal-darker,
+  "teal-dark": $teal-dark,
+  "teal-light": $teal-light,
+  "teal-lighter": $teal-lighter,
+  "teal-lightest": $teal-lightest,
+  "eggplant": $eggplant,
+  "eggplant-darkest": $eggplant-darkest,
+  "eggplant-darker": $eggplant-darker,
+  "eggplant-dark": $eggplant-dark,
+  "eggplant-light": $eggplant-light,
+  "eggplant-lighter": $eggplant-lighter,
+  "eggplant-lightest": $eggplant-lightest,
+  "maroon": $maroon,
+  "maroon-darkest": $maroon-darkest,
+  "maroon-darker": $maroon-darker,
+  "maroon-dark": $maroon-dark,
+  "maroon-light": $maroon-light,
+  "maroon-lighter": $maroon-lighter,
+  "maroon-lightest": $maroon-lightest,
+  "orange-darkest": $orange-darkest,
+  "orange-darker": $orange-darker,
+  "orange-dark": $orange-dark,
+  "orange-light": $orange-light,
+  "orange-lighter": $orange-lighter,
+  "orange-lightest": $orange-lightest,
+  "steel": $steel
+);
+
+$grays: (
+"50": $gray-50,
+"100": $gray-100,
+"200": $gray-200,
+"300": $gray-300,
+"400": $gray-400,
+"500": $gray-500,
+"600": $gray-600,
+"700": $gray-700,
+"800": $gray-800,
+"900": $gray-900
+);
+
+$primary: $red;
+//$secondary: $gray-600;
+//$success: $green;
+$info: $steel;
+$warning: $orange-special;
+$danger: $red-special;
+//$light: $gray-100;
+//$dark: $gray-800;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white;
+$body-bg-banded: $gray-50;
+$body-color: $gray-900;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: #1565c0;
+$link-visited-color: #4527a0;
+
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom: 1em;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: map-merge(
+    (
+        xxl: 1500px,
+        xxxl: 1921px
+    ),
+    $grid-breakpoints
+);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: map-merge(
+    (
+    xxl: 1440px,
+    xxxl: 1860px
+    ),
+    $grid-breakpoints
+);
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Fira Sans", sans-serif;
+//$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-uni: "Uni sans", sans-serif;
+$font-family-base: $font-family-sans-serif;
+// stylelint-enable value-keyword-case
+
+$font-weight-thin: 100;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: 800;
+$font-weight-heavy: 900;
+
+$font-weight-base: $font-weight-light;
+
+
+
 $galleryCaptionColor: $figure-caption-color;
 
 $widgetFontColor: $body-color;
