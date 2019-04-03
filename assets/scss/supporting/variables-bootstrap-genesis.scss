@@ -196,12 +196,14 @@ $paragraph-margin-bottom: 1em;
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
-$grid-breakpoints: map-merge(
-    (
-        xxl: 1500px,
-        xxxl: 1921px
-    ),
-    $grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px, // new
+  xxxl: 1921px // new
 );
 
 
@@ -209,13 +211,15 @@ $grid-breakpoints: map-merge(
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-max-widths: map-merge(
-    (
-    xxl: 1440px,
-    xxxl: 1860px
-    ),
-    $grid-breakpoints
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px, // new
+  xxxl: 1860px // new
 );
+
 
 // Typography
 //
