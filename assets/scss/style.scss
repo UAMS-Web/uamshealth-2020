@@ -1,13 +1,19 @@
 // Bootstrap Core Variable Override
 @import "supporting/variables-bootstrap-core-override";
 
+// Import Responsive Font-Size, since Bootstrap seems to not do so
+@import "../../node_modules/bootstrap/scss/vendor/_rfs.scss";
+
+// Bootstrap Genesis Theme Variables
+@import "supporting/variables-bootstrap-genesis";
+
 // Import Bootstrap Core
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import "../../node_modules/smartmenus-bootstrap-4/jquery.smartmenus.bootstrap-4";
 
-// Bootstrap Genesis Theme Variables
-@import "supporting/variables-bootstrap-genesis";
+// Base Page Styles
+@import "supporting/page";
 
 // Screen Reader Classes
 @import "supporting/screen-reader-text";
