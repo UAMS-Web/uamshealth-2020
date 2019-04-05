@@ -141,11 +141,13 @@
         margin-left: $spacer-min;
     }
 
-    #secondary-nav {
+    #nav-secondary {
         flex-grow: 0;
     }
 }
 .site-nav {
+    padding: 0;
+    
     .navbar-nav {
         line-height: 1;
         @extend .w-100;
