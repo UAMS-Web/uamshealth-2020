@@ -12,8 +12,9 @@
 
 @import "../../node_modules/smartmenus-bootstrap-4/jquery.smartmenus.bootstrap-4";
 
-// Base Page Styles
-@import "supporting/page";
+// UAMS Supporting Styles
+@import "uams-supporting/page";
+@import "uams-supporting/utilities/text";
 
 // Screen Reader Classes
 @import "supporting/screen-reader-text";
@@ -46,6 +47,7 @@
 
 // Header
 @import "supporting/header";
+@import "uams-supporting/header";
 
 // Jumbotron
 @import "supporting/jumbotron";
