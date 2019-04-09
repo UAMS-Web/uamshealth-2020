@@ -19,6 +19,9 @@ function bfg_theme_scripts() {
 		// Enqueue Bootstrap CSS
 		wp_enqueue_style( 'app-css', BFG_THEME_CSS . 'app.css' );
 
+		// Enqueue Google Fonts
+		wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Fira+Sans:300,300i,500,500i,600,600i,800,800i', array(), 'CHILD_THEME_VERSION' );
+
 		// Disable the superfish script
 		wp_deregister_script( 'superfish' );
 		wp_deregister_script( 'superfish-args' );
