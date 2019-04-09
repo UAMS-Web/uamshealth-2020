@@ -108,6 +108,19 @@
         }
 
         .list {
+            margin: (-$grid-gutter-width / 2);
+
+            .item-container {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: ($grid-gutter-width / 2);
+
+                @media (min-width: 1784px) {
+                    flex: 0 0 50%;
+                    //max-width: 50%;
+                    max-width: 1400px;
+                }
+            }
             .item {
                 background-color: $card-bg;
                 background-clip: border-box;
@@ -117,114 +130,75 @@
                 overflow: hidden;
                 @include font-size(1rem);
 
-                > .row {
+                .row {
                     margin: -$card-spacer-x;
                     
-                    @include media-breakpoint-up(xs) {
+                    @media
+                    (min-width: $breakpoint-xs) and (max-width: ($breakpoint-sm - 1)),
+                    (min-width: 930px) { // normal
                         margin: 0 (-$card-spacer-x / 2);
                     }
-                    
-                    @include media-breakpoint-up(sm) {
-                        margin: -$card-spacer-x;
-                    }
-                    
-                    @include media-custom-up(930px) {
-                        margin: 0 (-$card-spacer-x / 2);
-                    }
-                        
-                    @include media-custom-up(1295px) {
-                    }
-                        
-                    @include media-custom-up(1396px) {
+
+                    .image,
+                    .text {
+                        padding: 0 ($card-spacer-x / 2);
+
+                        @media
+                        (max-width: ($breakpoint-xs - 1)),
+                        (min-width: $breakpoint-sm) and (max-width: (930px - 1)) { // Fixed image height, auto width
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
                     }
 
                     .image {
-                        padding: 0;
-                        text-align: center;
-                        background-color: $gray-400;
-                        
-                        @include media-breakpoint-up(xs) {
-                            padding: 0 ($card-spacer-x / 2);
-                            text-align: left;
-                            background-color: transparent;
-
-                            flex-basis: 115px;
-                            flex-grow: 0;
-                            width: auto;
-                        }
-                        
-                        @include media-breakpoint-up(sm) {
+                        @media
+                        (max-width: ($breakpoint-xs - 1)),
+                        (min-width: $breakpoint-sm) and (max-width: (930px - 1)) { // Fixed image height, auto width
                             padding: 0;
                             text-align: center;
                             background-color: $gray-400;
-
                             flex-basis: 100%;
                         }
                         
-                        @include media-custom-up(930px) {
-                            padding: 0 ($card-spacer-x / 2);
-                            text-align: left;
-                            background-color: transparent;
-
+                        @media (min-width: $breakpoint-xs) {
+                            flex-grow: 0;
+                            flex-shrink: 0;
+                        }
+                        
+                        @media (min-width: $breakpoint-xs) and (max-width: ($breakpoint-sm - 1)) { // image width 95px
+                            flex-basis: 115px;
+                        }
+                        
+                        @media
+                        (min-width: 930px) and (max-width: (1295px - 1)),
+                        (min-width: 1784px) and (max-width: (1784px + 365 - 1)) { // 184px image width
                             flex-basis: 204px;
                         }
                         
-                        @include media-custom-up(1295px) {
-                            //flex-basis: 281px;
-                            flex-basis: 263px;
-                        }
-                        
-                        @include media-custom-up(1396px) {
+                        @media
+                        (min-width: 1295px) and (max-width: (1784px - 1)),
+                        (min-width: (1784px + 365)) { // 243px image width
                             flex-basis: 263px;
                         }
 
                         img {
-                            height:300px;
-
-                            @include media-breakpoint-up(xs) {
-                                height:auto;
+                            @media
+                            (max-width: ($breakpoint-xs - 1)),
+                            (min-width: $breakpoint-sm) and (max-width: (930px - 1)) { // Fixed image height, auto width
+                                height:245px;
                             }
 
-                            @include media-breakpoint-up(sm) {
-                                height:300px;
-                            }
-
-                            @include media-custom-up(930px) {
-                                height:auto;
-                            }
-                        
-                            @include media-custom-up(1295px) {
-                            }
-                        
-                            @include media-custom-up(1396px) {
-                            }
                         }
                     }
                     .text {
-                        padding: $card-spacer-x;
-
-                        @include media-breakpoint-up(xs) {
-                            padding: 0 ($card-spacer-x / 2);
-                        }
-
-                        @include media-breakpoint-up(sm) {
+                        @media
+                        (max-width: ($breakpoint-xs - 1)),
+                        (min-width: $breakpoint-sm) and (max-width: (930px - 1)) { // Fixed image height, auto width
                             padding: $card-spacer-x;
                         }
 
-                        @include media-custom-up(930px) {
-                            padding: 0 ($card-spacer-x / 2);
-                            flex-grow: 1;
-                            flex-basis: 0;
-                            max-width: 100%;
-                        }
-                        
-                        @include media-custom-up(1295px) {
-                        }
-                        
-                        @include media-custom-up(1396px) {
-                        }
-
-                        > .row {
+                        .row {
                             margin: 0 (-$card-spacer-x / 2);
                         }
 
@@ -233,11 +207,15 @@
                         }
 
                         .primary {
-                            @include media-breakpoint-up(lg) {
+                            @media
+                            (min-width: $breakpoint-lg) and (max-width: (1784px - 1)),
+                            (min-width: (1784px + 270)) { // 18px font-size
                                 @include font-size(1.125rem);
                             }
                         
-                            @include media-custom-up(1396px) {
+                            @media
+                            (min-width: 1396px) and (max-width: (1784px - 1)),
+                            (min-width: (1784px + 466)) { // three column
                                 flex-basis: 0;
                                 flex-grow: 1;
                                 padding-right: $card-spacer-x;
@@ -248,7 +226,9 @@
                             }
                         }
                         .secondary {
-                            @include media-custom-up(1396px) {
+                            @media
+                            (min-width: 1396px) and (max-width: (1784px - 1)),
+                            (min-width: (1784px + 466)) { // three column
                                 //flex-basis: 273px;
                                 flex-basis: 39.17%;
                                 border-left: $card-border-width solid $card-border-color;
@@ -259,7 +239,6 @@
                 }
             }
         }
-
     }
 }
 
