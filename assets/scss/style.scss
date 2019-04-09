@@ -1,11 +1,11 @@
 // Bootstrap Core Variable Override
 @import "supporting/variables-bootstrap-core-override";
 
-// Import Responsive Font-Size, since Bootstrap seems to not do so
-@import "../../node_modules/bootstrap/scss/vendor/_rfs.scss";
-
 // Bootstrap Genesis Theme Variables
 @import "supporting/variables-bootstrap-genesis";
+
+// UAMS Mixins
+@import "uams-mixins/breakpoints";
 
 // Import Bootstrap Core
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -63,6 +63,9 @@
 
 // Sidebar
 @import "supporting/sidebar";
+
+// Doctors
+@import "uams-supporting/doctor-list";
 
 // Footer Widgets
 @import "supporting/footer-widgets";

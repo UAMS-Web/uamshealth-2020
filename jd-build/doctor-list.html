@@ -1,0 +1,569 @@
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body>
+    <h1 class="sr-only">Doctors List</h1>
+    <main class="container-fluid doctor-list">
+        <div class="row">
+            <div class="col-12 col-sm filter-col">
+                <h2>Filters</h2>
+                <fieldset>
+                    <legend class="sr-only">Filter by...</legend>
+                    <h3>Search Doctors, Specialty or Condition</h3>
+                    <div class="filter-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"><span class="fas fa-search"></span><span class="sr-only">Search</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Last Name Starts With</h3>
+                    <div class="filter-group">
+                        <ul class="az-filter">
+                            <li><a href="javascript:void(0)">Any</a></li>
+                            <li><a href="javascript:void(0)">#</a></li>
+                            <li><a href="javascript:void(0)">A</a></li>
+                            <li><a href="javascript:void(0)">B</a></li>
+                            <li><a href="javascript:void(0)">C</a></li>
+                            <li><a href="javascript:void(0)">D</a></li>
+                            <li><a href="javascript:void(0)">E</a></li>
+                            <li><a href="javascript:void(0)">F</a></li>
+                            <li><a href="javascript:void(0)">G</a></li>
+                            <li><a href="javascript:void(0)">H</a></li>
+                            <li><a href="javascript:void(0)">I</a></li>
+                            <li><a href="javascript:void(0)">J</a></li>
+                            <li><a href="javascript:void(0)">K</a></li>
+                            <li><a href="javascript:void(0)">L</a></li>
+                            <li><a href="javascript:void(0)">M</a></li>
+                            <li><a href="javascript:void(0)">N</a></li>
+                            <li><a href="javascript:void(0)">O</a></li>
+                            <li><a href="javascript:void(0)">P</a></li>
+                            <li><a href="javascript:void(0)">Q</a></li>
+                            <li><a href="javascript:void(0)">R</a></li>
+                            <li><a href="javascript:void(0)">S</a></li>
+                            <li><a href="javascript:void(0)">T</a></li>
+                            <li><a href="javascript:void(0)">U</a></li>
+                            <li><a href="javascript:void(0)">V</a></li>
+                            <li><a href="javascript:void(0)">W</a></li>
+                            <li><a href="javascript:void(0)">X</a></li>
+                            <li><a href="javascript:void(0)">Y</a></li>
+                            <li><a href="javascript:void(0)">Z</a></li>
+                        </ul>
+                    </div>
+                    <h3>Primary Care</h3>
+                    <div class="filter-group">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="custom-control-label" for="defaultCheck1">
+                                Yes (1<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="defaultCheck2">
+                            <label class="custom-control-label" for="defaultCheck2">
+                                No (1<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                    </div>
+                    <h3>Conditions Treated</h3>
+                    <div class="filter-group">??</div>
+                    <h3>Patient Type</h3>
+                    <div class="filter-group">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="patient-type-1">
+                            <label class="custom-control-label" for="patient-type-1">
+                                Adults (2<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="patient-type-2">
+                            <label class="custom-control-label" for="patient-type-2">
+                                Children and Adolescents (1<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                    </div>
+                    <h3>Gender</h3>
+                    <div class="filter-group">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="gender-1">
+                            <label class="custom-control-label" for="gender-1">
+                                Female (1<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="gender-2">
+                            <label class="custom-control-label" for="gender-2">
+                                Male (1<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                    </div>
+                    <h3>Languages</h3>
+                    <div class="filter-group">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="language-1">
+                            <label class="custom-control-label" for="language-1">
+                                Language A (2<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="language-2">
+                            <label class="custom-control-label" for="language-2">
+                                Language B (1<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                    </div>
+                    <h3>Location</h3>
+                    <div class="filter-group">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="location-1">
+                            <label class="custom-control-label" for="location-1">
+                                Location A (2<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="location-2">
+                            <label class="custom-control-label" for="location-2">
+                                Location B (1<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                    </div>
+                    <h3>Rating</h3>
+                    <div class="filter-group">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="rating-1" disabled>
+                            <label class="custom-control-label" for="rating-1">
+                                5 Stars only (0<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="rating-2">
+                            <label class="custom-control-label" for="rating-2">
+                                4 Stars and up (2<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="rating-3">
+                            <label class="custom-control-label" for="rating-3">
+                                3 Stars and up (1<span class="sr-only"> result</span>)
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="rating-4">
+                            <label class="custom-control-label" for="rating-4">
+                                2 Stars and up (1<span class="sr-only"> result</span>)
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="rating-5">
+                            <label class="custom-control-label" for="rating-5">
+                                1 Star and up (1<span class="sr-only"> result</span>)
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" value="" id="rating-6" disabled>
+                            <label class="custom-control-label" for="rating-6">
+                                No rating (0<span class="sr-only"> results</span>)
+                            </label>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="filter-buttons">
+                        <button type="button" class="btn btn-outline-primary">Reset</button>
+                        <button type="button" class="btn btn-primary">Apply</button>
+                    </div>
+                </fieldset>
+                
+            </div>
+            <div class="col-12 col-sm list-col">
+                <h2 class="sr-only">List of Doctors</h2>
+                <div class="row list-col-header">
+                    <div class="col result-count"><p>10 Doctors</p></div>
+                    <div class="col filter-toggle d-sm-none"><a href="#" title="Toggle Filter Tray" class="toggle-filter"><span class="sr-only">Toggle Filter Tray</span><span class="fas fa-filter"></span></a></div>
+                    <div class="col sort-select">
+                        <select class="custom-select">
+                            <option>Sort By</option>
+                            <option>Name (A-Z)</option>
+                            <option>Name (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row list">
+                    <div class="col-12">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-12 col-xs-3 col-sm-12 col-md image">
+                                    <img src="https://picsum.photos/383/575?image=669">
+                                </div>
+                                <div class="col-12 col-xs col-sm-12 col-md text">
+                                <div class="row">
+                                    <div class="col-12 primary">
+                                    <h3 class="h4">
+                                        <span class="name">C. Lowry Barnes, M.D.</span>
+                                        <span class="specialty">Orthopaedic Surgery</span>
+                                    </h3>
+                                    <div class="rating">
+                                        <span class="ds-stars ds-stars45"></span>
+                                        <span class="count">(595 ratings)</span>
+                                    </div>
+                                    <p>C. Lowry Barnes, MD, completed fellowship training in total joint replacement from Harvard Medical School and from Brigham and Women’s Hospital in Boston, Massachusetts. In 2000, Dr. Barnes was named&nbsp;...</p>
+                                    <a class="uams-btn btn-red btn-sm" href="https://codepen.io/fedaykin00/full/zXOxKj">Full Profile</a>
+                                    </div>
+                                    <div class="col-12 secondary">
+                                    <h4 class="h5">Locations</h5>
+                                    <ul>
+                                        <li><a href="https://codepen.io/fedaykin00/full/mogamw">Orthopedic Clinic – Shackleford W Blvd</a></li>
+                                        <li><a href="https://codepen.io/fedaykin00/full/mogamw">University of Arkansas for Medical Sciences</a></li>
+                                    </ul>
+                                    <a class="uams-btn btn-red btn-sm" href="https://codepen.io/fedaykin00/full/zXOxKj">Full Profile</a>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+        
+    <div class="container-fluid jd-doctors-list d-none">
+            <div class="row">
+              <div class="col-xs-12 col-sm-9 col-lg-9 list-col">
+                <div class="list-col-header">
+                  <a href="#" title="Toggle Filter Tray" class="toggle-filter"><span class="sr-only">Toggle Filter Tray</span><span class="fas fa-filter"></span></a>
+                  <p>10 Doctors</p>
+                  <select class="form-control">
+                    <option>Sort By</option>
+                    <option>Name (A-Z)</option>
+                    <option>Name (Z-A)</option>
+                  </select>
+                </div>
+                <h2 class="sr-only">List of Doctors</h2>
+                <div class="row row-eq-height list-container">
+                  <div class="col-xs-12 item">
+                      <div class="row row-eq-height">
+                        <div class="col-xs-12 col-md-6 image">
+                          <img src="https://doctors.uamsweb.com/wp-content/uploads/2018/12/image00980.jpg">
+                        </div>
+                        <div class="col-xs-12 col-md-6 text">
+                          <div class="row row-eq-height">
+                            <div class="col-xs-12 primary">
+                              <h3 class="h4">
+                                <span class="name">C. Lowry Barnes, M.D.</span>
+                                <span class="specialty">Orthopaedic Surgery</span>
+                              </h3>
+                              <div class="rating">
+                                <span class="ds-stars ds-stars45"></span>
+                                <span class="count">(595 ratings)</span>
+                              </div>
+                              <p>C. Lowry Barnes, MD, completed fellowship training in total joint replacement from Harvard Medical School and from Brigham and Women’s Hospital in Boston, Massachusetts. In 2000, Dr. Barnes was named&nbsp;...</p>
+                              <a class="uams-btn btn-red btn-sm" href="https://codepen.io/fedaykin00/full/zXOxKj">Full Profile</a>
+                            </div>
+                            <div class="col-xs-12 secondary">
+                              <h4 class="h5">Locations</h5>
+                              <ul>
+                                <li><a href="https://codepen.io/fedaykin00/full/mogamw">Orthopedic Clinic – Shackleford W Blvd</a></li>
+                                <li><a href="https://codepen.io/fedaykin00/full/mogamw">University of Arkansas for Medical Sciences</a></li>
+                              </ul>
+                              <a class="uams-btn btn-red btn-sm" href="https://codepen.io/fedaykin00/full/zXOxKj">Full Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 item">
+                      <div class="row row-eq-height">
+                        <div class="col-xs-12 col-md-6 image">
+                          <img src="https://doctors.uamsweb.com/wp-content/uploads/2018/12/image00940-230x300.jpg">
+                        </div>
+                        <div class="col-xs-12 col-md-6 text">
+                          <div class="row row-eq-height">
+                            <div class="col-xs-12 primary">
+                              <h3 class="h4">
+                                <span class="name">Kathryn (Katie) Brown, O.D.</span>
+                                <span class="specialty">Ophthalmology</span>
+                              </h3>
+                              <div class="rating">
+                                <span class="ds-stars ds-stars5"></span>
+                                <span class="count">(354 ratings)</span>
+                              </div>
+                              <p>Katie L. Brown. O.D., is an optometric physician at the University of Arkansas for Medical Sciences (UAMS). Dr. Brown graduated from Southern College of Optometry Magna cum laude. She performs&nbsp;...</p>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                            <div class="col-xs-12 secondary">
+                              <h4 class="h5">Locations</h5>
+                              <ul>
+                                <li><a href="#">Eye: Jones Eye Institute Clinic</a></li>
+                                <li><a href="#">University of Arkansas for Medical Sciences</a></li>
+                              </ul>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 item">
+                      <div class="row row-eq-height">
+                        <div class="col-xs-12 col-md-6 image">
+                          <img src="https://doctors.uamsweb.com/wp-content/uploads/2018/12/image00996.jpg">
+                        </div>
+                        <div class="col-xs-12 col-md-6 text">
+                          <div class="row row-eq-height">
+                            <div class="col-xs-12 primary">
+                              <h3 class="h4">
+                                <span class="name">Rodney Davis, M.D.</span>
+                                <span class="specialty">Urology</span>
+                              </h3>
+                              <div class="rating">
+                                <span class="ds-stars ds-stars5"></span>
+                                <span class="count">(383 ratings)</span>
+                              </div>
+                              <p>Dr. Rodney Davis, an internationally recognized expert in minimally invasive techniques for the treatment of urologic cancers, serves as professor and chairman of the Department of Urology. Dr. Davis most&nbsp;...</p>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                            <div class="col-xs-12 secondary">
+                              <h4 class="h5">Locations</h5>
+                              <ul>
+                                <li><a href="#">Urology Clinic</a></li>
+                                <li><a href="#">University of Arkansas for Medical Sciences</a></li>
+                                <li><a href="#">Cancer: Urology Cancer Clinic</a></li>
+                              </ul>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 item">
+                      <div class="row row-eq-height">
+                        <div class="col-xs-12 col-md-6 image">
+                          <img src="https://doctors.uamsweb.com/wp-content/uploads/2018/12/image00541-230x300.jpg">
+                        </div>
+                        <div class="col-xs-12 col-md-6 text">
+                          <div class="row row-eq-height">
+                            <div class="col-xs-12 primary">
+                              <h3 class="h4">
+                                <span class="name">J.D. Day, M.D.</span>
+                                <span class="specialty">Neurosurgery</span>
+                              </h3>
+                              <div class="rating">
+                                <span class="ds-stars ds-stars45"></span>
+                                <span class="count">(180 ratings)</span>
+                              </div>
+                              <p>Dr. J.D. Day is an internationally known leader in skull base surgery and specialist in Gamma Knife surgery and vascular disorders of the brain and skull base. He previously was&nbsp;...</p>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                            <div class="col-xs-12 secondary">
+                              <h4 class="h5">Locations</h5>
+                              <ul>
+                                <li><a href="#">Neurosciences: Neurosurgery Clinic</a></li>
+                              </ul>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 item">
+                      <div class="row row-eq-height">
+                        <div class="col-xs-12 col-md-6 image">
+                          <img src="https://doctors.uamsweb.com/wp-content/uploads/2018/12/image00185.jpg">
+                        </div>
+                        <div class="col-xs-12 col-md-6 text">
+                          <div class="row row-eq-height">
+                            <div class="col-xs-12 primary">
+                              <h3 class="h4">
+                                <span class="name">Ronda Henry-Tillman, M.D.</span>
+                                <span class="specialty">Breast Surgical Oncology</span>
+                              </h3>
+                              <div class="rating">
+                                <span class="ds-stars ds-stars45"></span>
+                                <span class="count">(200 ratings)</span>
+                              </div>
+                              <p>Ronda Henry-Tillman, M.D. is a surgical oncologist specializing in breast oncology at the University of Arkansas for Medical Sciences (UAMS). A professor for the Department of Surgery at UAMS, Dr.&nbsp;...</p>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                            <div class="col-xs-12 secondary">
+                              <h4 class="h5">Locations</h5>
+                              <ul>
+                                <li><a href="#">Cancer: Breast Cancer Clinic</a></li>
+                              </ul>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 item">
+                      <div class="row row-eq-height">
+                        <div class="col-xs-12 col-md-6 image">
+                          <img src="https://doctors.uamsweb.com/wp-content/uploads/2018/12/image00482.jpg">
+                        </div>
+                        <div class="col-xs-12 col-md-6 text">
+                          <div class="row row-eq-height">
+                            <div class="col-xs-12 primary">
+                              <h3 class="h4">
+                                <span class="name">Nirvana A. Manning, M.D.</span>
+                                <span class="specialty">Obstetrics And Gynecology</span>
+                              </h3>
+                              <div class="rating">
+                                <span class="ds-stars ds-stars5"></span>
+                                <span class="count">(235 ratings)</span>
+                              </div>
+                              <p>Nirvana Manning, MD, is an Associate Professor at the University of Arkansas for Medical Sciences (UAMS) Department of Obstetrics and Gynecology. She graduated from UAMS in 2003 and completed her&nbsp;...</p>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                            <div class="col-xs-12 secondary">
+                              <h4 class="h5">Locations</h5>
+                              <ul>
+                                <li><a href="#">Women’s Health Clinic at Financial Centre Parkway</a></li>
+                                <li><a href="#">University of Arkansas for Medical Sciences</a></li>
+                              </ul>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 item">
+                      <div class="row row-eq-height">
+                        <div class="col-xs-12 col-md-6 image">
+                          <img src="https://doctors.uamsweb.com/wp-content/uploads/2018/12/image00329-226x300.jpg">
+                        </div>
+                        <div class="col-xs-12 col-md-6 text">
+                          <div class="row row-eq-height">
+                            <div class="col-xs-12 primary">
+                              <h3 class="h4">
+                                <span class="name">James D. Marsh, M.D.</span>
+                                <span class="specialty">Internal Medicine</span>
+                              </h3>
+                              <div class="rating">
+                                <span class="ds-stars ds-stars5"></span>
+                                <span class="count">(76 ratings)</span>
+                              </div>
+                              <p>James D. Marsh, M.D. is the Nolan Professor and Chairman of the Department of Internal Medicine in the College of Medicine at the University of Arkansas for Medical Sciences (UAMS).&nbsp;...</p>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                            <div class="col-xs-12 secondary">
+                              <h4 class="h5">Locations</h5>
+                              <ul>
+                                <li><a href="#">Heart & Vascular: Cardiology Clinic</a></li>
+                              </ul>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 item">
+                      <div class="row row-eq-height">
+                        <div class="col-xs-12 col-md-6 image">
+                          <img src="https://doctors.uamsweb.com/wp-content/uploads/2018/12/image00419-230x300.jpg">
+                        </div>
+                        <div class="col-xs-12 col-md-6 text">
+                          <div class="row row-eq-height">
+                            <div class="col-xs-12 primary">
+                              <h3 class="h4">
+                                <span class="name">Sami H Uwaydat, M.D.</span>
+                                <span class="specialty">Ophthalmology</span>
+                              </h3>
+                              <div class="rating">
+                                <span class="ds-stars ds-stars5"></span>
+                                <span class="count">(388 ratings)</span>
+                              </div>
+                              <p>Sami H. Uwaydat, M.D., is an ophthalmologist with the Harvey and Bernice Jones Eye Institute at the University of Arkansas for Medical Sciences (UAMS). Dr. Uwaydat is also an associate&nbsp;...</p>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                            <div class="col-xs-12 secondary">
+                              <h4 class="h5">Locations</h5>
+                              <ul>
+                                <li><a href="#">University of Arkansas for Medical Sciences</a></li>
+                                <li><a href="#">Eye: Jones Eye Institute Clinic</a></li>
+                              </ul>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 item">
+                      <div class="row row-eq-height">
+                        <div class="col-xs-12 col-md-6 image">
+                          <img src="https://doctors.uamsweb.com/wp-content/uploads/2018/12/image00243-230x300.jpg">
+                        </div>
+                        <div class="col-xs-12 col-md-6 text">
+                          <div class="row row-eq-height">
+                            <div class="col-xs-12 primary">
+                              <h3 class="h4">
+                                <span class="name">Jeanne Wei, M.D.</span>
+                                <span class="specialty">Geriatrics</span>
+                              </h3>
+                              <div class="rating">
+                                <span class="ds-stars ds-stars5"></span>
+                                <span class="count">(53 ratings)</span>
+                              </div>
+                              <p>Jeanne Y. Wei, M.D., Ph.D., Jackson T. Stephens Professor of Geriatrics, College of Medicine, University of Arkansas for Medical Sciences (UAMS), is Chair, Reynolds Department of Geriatrics & Executive Director of&nbsp;...</p>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                            <div class="col-xs-12 secondary">
+                              <h4 class="h5">Locations</h5>
+                              <ul>
+                                <li><a href="#">Thomas and Lyon Longevity Clinic</a></li>
+                                <li><a href="#">Reynolds Institute on Aging</a></li>
+                              </ul>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 item">
+                      <div class="row row-eq-height">
+                        <div class="col-xs-12 col-md-6 image">
+                          <img src="https://doctors.uamsweb.com/wp-content/uploads/2018/12/image00471-230x300.jpg">
+                        </div>
+                        <div class="col-xs-12 col-md-6 text">
+                          <div class="row row-eq-height">
+                            <div class="col-xs-12 primary">
+                              <h3 class="h4">
+                                <span class="name">Theresa Wyrick-Glover, M.D.</span>
+                                <span class="specialty">Orthopaedic Surgery</span>
+                              </h3>
+                              <div class="rating">
+                                <span class="ds-stars ds-stars5"></span>
+                                <span class="count">(308 ratings)</span>
+                              </div>
+                              <p>Dr. Theresa Wyrick-Glover, a native of Little Rock, Arkansas, obtained her doctorate of medicine from the University of Arkansas for Medical Sciences. She received several honors including being named &nbsp;...</p>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                            <div class="col-xs-12 secondary">
+                              <h4 class="h5">Locations</h5>
+                              <ul>
+                                <li><a href="#">Orthopedic Clinic – Autumn Road</a></li>
+                                <li><a href="#">Arkansas Children’s Hospital</a></li>
+                              </ul>
+                              <a class="uams-btn btn-red btn-sm">Full Profile</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    <script type="text/javascript" src="../assets/js/jquery.slim.min.js?ver=2.0.2"></script>
+    <script type="text/javascript" src="../assets/js/popper.min.js?ver=2.0.2"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.min.js?ver=2.0.2"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartmenus.min.js?ver=2.0.2"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartmenus.bootstrap-4.min.js?ver=2.0.2"></script>
+    <script type="text/javascript" src="../assets/js/app.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
