@@ -3,8 +3,10 @@
 @import "../../../node_modules/bootstrap/scss/_functions.scss";
 @import "../../../node_modules/bootstrap/scss/_variables.scss";
 
-/* Variables
------------------------------------------------------------- */
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 // Color system
 
@@ -233,6 +235,7 @@ $enable-deprecation-messages: true;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
+$spacer: 1rem;
 $spacer-min: 10px;
 $spacers: (
     0: 0,
@@ -270,7 +273,6 @@ $body-color: $gray-900;
 //
 // Style anchor elements.
 
-//$link-color: #1565c0;
 $link-color: theme-color("primary");
 $link-decoration: none;
 $link-hover-color: darken($link-color, 15%);
