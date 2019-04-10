@@ -13,8 +13,10 @@
 @import "../../node_modules/smartmenus-bootstrap-4/jquery.smartmenus.bootstrap-4";
 
 // UAMS Supporting Styles
-@import "uams-supporting/page";
 @import "uams-supporting/utilities/text";
+@import "uams-supporting/page";
+@import "uams-supporting/typography";
+@import "uams-supporting/forms";
 
 // Screen Reader Classes
 @import "supporting/screen-reader-text";

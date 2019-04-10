@@ -8,15 +8,14 @@
         }
     }
     .filter-col {
-        @include font-size(1rem);
+        position: relative;
 
-        @include media-breakpoint-down(xs) {
-            display: none;
-        }
+        @include font-size(1rem);
 
         @include media-breakpoint-up(sm) {
             flex-basis: 265px;
             flex-grow: 0;
+            display: block;
         }
         @include media-breakpoint-up(md) {
             flex-basis: 350px;
@@ -25,6 +24,25 @@
         h2 {
             margin-bottom: $spacer * 2;
             @extend .h3;
+        }
+
+        .close {
+            display: inline-block;
+            position: absolute;
+            top: $spacer * 2;
+            right: $spacer * 2;
+            min-width: 26px;
+            min-height: 26px;
+            line-height: 1;
+            overflow: hidden;
+
+            @include media-breakpoint-up(sm) {
+                display: none;
+            }
+            span {
+                display: inline-block;
+                height: 26px;
+            }
         }
 
         h3 {
@@ -54,6 +72,11 @@
                 &:before, &:after {
                     top: 0.25rem;
                 }
+            }
+            small {
+                color: $text-muted;
+                display: block;
+                margin-top: .25rem;
             }
         }
         
@@ -95,8 +118,41 @@
                 }
             }
 
-            .filter-toggle {
+            .filter-toggle-container {
+                @include media-breakpoint-up(sm) {
+                    display: none;
+                }
+                .filter-toggle {
+                    color: $primary;
+                    background-color: $white;
+                    border: 1px solid $input-border-color;
+                    border-radius: $border-radius;
+                    display: flex;
+                    align-items: center;
+                    height: $custom-select-height;
+                    padding: $custom-select-padding-y $custom-select-padding-x;
+                    line-height: $custom-select-line-height;
+                    background-color: $custom-select-bg;
+                    border: $custom-select-border-width solid $custom-select-border-color;
+                    @include border-radius($custom-select-border-radius, 0);
+                    @include box-shadow($custom-select-box-shadow);
 
+                    &:hover, &:active, &:focus, &.active {
+                        cursor: pointer;
+                        color: $link-hover-color;
+                    }
+
+                    &.active {
+                        border-color: $primary;
+                        background-color: $primary;
+                        color: $white;
+                        @if $enable-shadows {
+                            box-shadow: $custom-select-box-shadow, $custom-select-focus-box-shadow;
+                        } @else {
+                            box-shadow: $custom-select-focus-box-shadow;
+                        }
+                    }
+                }
             }
 
             .sort-select {
@@ -109,8 +165,10 @@
 
         .list {
             margin: (-$grid-gutter-width / 2);
+            justify-content: center;
 
             .item-container {
+                display: flex;
                 flex: 0 0 100%;
                 max-width: 100%;
                 padding: ($grid-gutter-width / 2);
@@ -172,13 +230,13 @@
                         
                         @media
                         (min-width: 930px) and (max-width: (1295px - 1)),
-                        (min-width: 1784px) and (max-width: (1784px + 365 - 1)) { // 184px image width
+                        (min-width: 1784px) and (max-width: (2054px - 1)) { // 184px image width
                             flex-basis: 204px;
                         }
                         
                         @media
-                        (min-width: 1295px) and (max-width: (1784px - 1)),
-                        (min-width: (1784px + 365)) { // 243px image width
+                        (min-width: $breakpoint-lg) and (max-width: (1784px - 1)),
+                        (min-width: (2054px)) { // 243px image width
                             flex-basis: 263px;
                         }
 
@@ -192,6 +250,8 @@
                         }
                     }
                     .text {
+                        display: flex;
+
                         @media
                         (max-width: ($breakpoint-xs - 1)),
                         (min-width: $breakpoint-sm) and (max-width: (930px - 1)) { // Fixed image height, auto width
@@ -221,8 +281,37 @@
                                 padding-right: $card-spacer-x;
                             }
 
+                            h3 {
+                                .name, .specialty {
+                                    display: block;
+                                }
+                                
+                                .specialty {
+                                    font-size: 0.75em;
+                                    font-weight: $font-weight-normal;
+                                    color: $gray-600;
+                                    margin-top: 0.25em;
+                                }
+                            }
+
+                            .rating {
+                                margin-bottom: 1.125rem;
+                            }
+
                             p {
-                                max-width: 35em;
+                                //max-width: 35em;
+                            }
+
+                            .btn {
+
+                                display: none;
+                        
+                                @media
+                                (min-width: 1396px) and (max-width: (1784px - 1)),
+                                (min-width: (1784px + 466)) { // three column
+                                    display: inline-block;
+                                }
+                                
                             }
                         }
                         .secondary {
@@ -234,35 +323,132 @@
                                 border-left: $card-border-width solid $card-border-color;
                                 padding-left: $card-spacer-x;
                             }
+
+                            .btn {
+
+                                display: inline-block;
+                        
+                                @media
+                                (min-width: 1396px) and (max-width: (1784px - 1)),
+                                (min-width: (1784px + 466)) { // three column
+                                    display: none;
+                                }
+                                
+                            }
                         }
                     }
                 }
+            }
+        }
+
+        .list-pagination {
+            margin-top: $grid-gutter-width;
+
+            .pagination {
+                justify-content: center;
             }
         }
     }
 }
 
 .az-filter {
-    @extend .list-unstyled;
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    margin: (-$spacer-min / 2);
 
-    li {
-        margin: $spacer-min / 2;
+    .custom-control,
+    .custom-control:not(:last-child) {
+        padding: 0;
+        margin: 0 !important;
+        min-height: 0 !important;
+        margin: $spacer-min / 2 !important;
 
-        a {
+        :checked ~ .az-filter-label {
+            border-color: $primary;
+            background-color: $primary;
+            color: $white;
+        }
+
+        :disabled ~ .az-filter-label {
+            color: $gray-300;
+            border-color: $gray-300;
+        }
+
+        :not(:disabled) {
+            ~ .az-filter-label {
+                &:hover, &:active, &:focus {
+                    border-color: $primary;
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+    
+            &:focus {
+                ~ .az-filter-label {
+                    @if $enable-shadows {
+                        box-shadow: $custom-select-box-shadow, $custom-select-focus-box-shadow;
+                    } @else {
+                        box-shadow: $custom-select-focus-box-shadow;
+                    }
+                }
+            }
+        }
+
+        .az-filter-label {
+            margin: 0;
+            padding: 0;
             display: inline-block;
             min-width: 26px;
             text-align: center;
-            border: $border-width solid $border-color;
+            border: $border-width solid $input-border-color;
             padding: 2px 7px;
-
-            &:hover, &:active, &:focus {
-                border-color: $primary;
-                background-color: $primary;
-                color: $white;
-                text-decoration: none;
-            }
+            border-radius: $border-radius;
         }
+    }
+}
+
+.rating {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+
+    .star-ratings-sprite {
+        position: relative;
+        display: block;
+        width: 8rem;
+        padding: 0;
+        overflow: hidden;
+
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 19.007793195210036%;
+            background-position: 0 0;
+            background-size: cover;
+            background-image: url("../svg/five-stars_sprite.svg");
+            background-repeat: no-repeat;
+        }
+        
+        .star-ratings-sprite-percentage {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-position: 0 100%;
+            background-size: cover;
+            background-image: url("../svg/five-stars_sprite.svg");
+            background-repeat: no-repeat;
+            background-size: auto 200%;
+        }
+    }
+    .ratings-count {
+        @include font-size($font-size-sm);
+        line-height: 1;
+        margin-left: 0.5em;
     }
 }
