@@ -22,10 +22,6 @@ h1, h2, h3, h4, h5, h6,
     }
 }
 
-.page-title {
-    font-weight: $font-weight-bolder;
-}
-
 ul, ol {
     padding-left: 2em;
 
@@ -38,6 +34,7 @@ strong, b {
     font-weight: $font-weight-bold;
 }
 
+.page-title,
 .module-title {
     text-align: center;
     @extend .line-length-50;
@@ -46,7 +43,6 @@ strong, b {
 
     + .note {
       @extend .line-length-80;
-      margin-top: (-$module-padding * 0.6667);
       @extend .mt-n5;
       @extend .mb-8;
       @extend .mt-sm-n9;
@@ -54,4 +50,8 @@ strong, b {
       text-align: center;
       font-style: italic;
     }
+}
+
+.page-title {
+    font-weight: $font-weight-bolder;
 }

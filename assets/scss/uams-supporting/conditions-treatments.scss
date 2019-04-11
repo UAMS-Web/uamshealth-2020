@@ -1,5 +1,23 @@
 .conditions-treatments {
+
+    .legend {
+        @extend .mt-8;
+        @extend .mt-xs-10;
+        @extend .pb-8;
+        border-bottom: 1px solid $gray-accent;
+        
+        .az-filter {
+            justify-content: center;
+        }
+
+        + .list-container {
+            @extend .mt-8;
+        }
+    }
     .list-container {
+        @extend .mt-8;
+        @extend .mt-xs-10;
+
         .list {
             @extend .list-unstyled;
             margin: 0 auto;
@@ -16,7 +34,7 @@
 
         &.list-container-columns {
           .list {
-            text-align: center;
+            text-align: left;
     
             @media (min-width: 640px) {
               //max-width: 530px;
@@ -48,6 +66,10 @@
                 &:first-child {
                     @extend .mt-0;
                 }
+
+                a {
+                    text-align: left;
+                }
             }
           }
         }
@@ -63,6 +85,16 @@
                     @extend .m-2;
                 }
             }
+        }
+    }
+
+    .list-pagination {
+        @extend .mt-8;
+        @extend .pt-8;
+        border-top: 1px solid $gray-accent;
+
+        .pagination {
+            justify-content: center;
         }
     }
 }
