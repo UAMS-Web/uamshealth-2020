@@ -27,3 +27,10 @@
         }
     }
 }
+
+.module-body {
+    + .card-list-container {
+        @extend .mt-8;
+        @extend .mt-xs-10;
+    }
+}
