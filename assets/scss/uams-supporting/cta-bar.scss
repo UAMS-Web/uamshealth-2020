@@ -2,18 +2,16 @@
 }
 
 .cta-bar-1 {
-
+    text-align: center;
+    
     h2, p {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
     }
 
     h2 {
-        width: $line-length-50+em;
+        @extend .line-length-50;
     }
     p {
         @extend .lead;
-        width: $line-length-80+em;
+        @extend .line-length-80;
     }
 }
