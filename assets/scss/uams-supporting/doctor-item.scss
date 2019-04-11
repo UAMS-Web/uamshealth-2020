@@ -8,11 +8,6 @@
             flex: 1 1 0;
         }
         max-width: 44rem;
-
-        h1 {
-            padding-bottom: $font-size-base;
-            border-bottom: 1px solid $gray-accent;
-        }
     }
     .image {
         background-color: $gray-400;
@@ -28,6 +23,14 @@
                 max-width: none;
             }
         }
+    }
+
+    .page-title {
+        width: auto;
+        text-align: left;
+        margin: 0 0 $font-size-base !important;
+        padding-bottom: $font-size-base;
+        border-bottom: 1px solid $gray-accent;
     }
 }
 
