@@ -20,137 +20,136 @@
                         <li>Text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window.</li>
                     </ul>
                 </div>
-                <div class="legend">
+                <div class="list-legend">
+                    <div class="az-filter">
+                            <!-- All Filters:
+                                Disable any checkbox input that does not represent any conditions. Add "disabled" to input.
+                                
+                                A-Z Filter:
+                                If we can legally do this, default to the "Featured" set of conditions, either defined manually or by analytics.
+                                Start with "Featured" checkbox input checked. Add "checked" attribute to input.
+                                If user checks any other checkbox input, remove "checked" attribute from "Featured" checkbox input.
 
-                        <div class="az-filter">
-                                <!-- All Filters:
-                                    Disable any checkbox input that does not represent any conditions. Add "disabled" to input.
-                                    
-                                    A-Z Filter:
-                                    If we can legally do this, default to the "Featured" set of conditions, either defined manually or by analytics.
-                                    Start with "Featured" checkbox input checked. Add "checked" attribute to input.
-                                    If user checks any other checkbox input, remove "checked" attribute from "Featured" checkbox input.
-
-                                    If user checks "All"/"Any" checkbox input, remove "checked" attribute from checkbox input of other characters.
-                                    After that, if user checks any other checkbox input, remove "checked" attribute from "Any"/"All" checkbox input.
-                                -->
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-featured" checked>
-                                    <label class="az-filter-label" for="az-filter-featured">Featured</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-any">
-                                    <label class="az-filter-label" for="az-filter-any">All</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-number" disabled>
-                                    <label class="az-filter-label" for="az-filter-number">#</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-A">
-                                    <label class="az-filter-label" for="az-filter-A">A</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-B">
-                                    <label class="az-filter-label" for="az-filter-B">B</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-C">
-                                    <label class="az-filter-label" for="az-filter-C">C</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-D">
-                                    <label class="az-filter-label" for="az-filter-D">D</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-E">
-                                    <label class="az-filter-label" for="az-filter-E">E</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-F">
-                                    <label class="az-filter-label" for="az-filter-F">F</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-G">
-                                    <label class="az-filter-label" for="az-filter-G">G</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-H">
-                                    <label class="az-filter-label" for="az-filter-H">H</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-I">
-                                    <label class="az-filter-label" for="az-filter-I">I</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-J">
-                                    <label class="az-filter-label" for="az-filter-J">J</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-K">
-                                    <label class="az-filter-label" for="az-filter-K">K</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-L">
-                                    <label class="az-filter-label" for="az-filter-L">L</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-M">
-                                    <label class="az-filter-label" for="az-filter-M">M</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-N">
-                                    <label class="az-filter-label" for="az-filter-N">N</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-O">
-                                    <label class="az-filter-label" for="az-filter-O">O</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-P">
-                                    <label class="az-filter-label" for="az-filter-P">P</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-Q">
-                                    <label class="az-filter-label" for="az-filter-Q">Q</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-R">
-                                    <label class="az-filter-label" for="az-filter-R">R</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-S">
-                                    <label class="az-filter-label" for="az-filter-S">S</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-T">
-                                    <label class="az-filter-label" for="az-filter-T">T</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-U">
-                                    <label class="az-filter-label" for="az-filter-U">U</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-V">
-                                    <label class="az-filter-label" for="az-filter-V">V</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-W">
-                                    <label class="az-filter-label" for="az-filter-W">W</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-X">
-                                    <label class="az-filter-label" for="az-filter-X">X</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-Y">
-                                    <label class="az-filter-label" for="az-filter-Y">Y</label>
-                                </div>
-                                <div class="custom-control">
-                                    <input type="checkbox" class="custom-control-input" id="az-filter-Z">
-                                    <label class="az-filter-label" for="az-filter-Z">Z</label>
-                                </div>
+                                If user checks "All"/"Any" checkbox input, remove "checked" attribute from checkbox input of other characters.
+                                After that, if user checks any other checkbox input, remove "checked" attribute from "Any"/"All" checkbox input.
+                            -->
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-featured" checked>
+                                <label class="az-filter-label" for="az-filter-featured">Featured</label>
                             </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-any">
+                                <label class="az-filter-label" for="az-filter-any">All</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-number" disabled>
+                                <label class="az-filter-label" for="az-filter-number">#</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-A">
+                                <label class="az-filter-label" for="az-filter-A">A</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-B">
+                                <label class="az-filter-label" for="az-filter-B">B</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-C">
+                                <label class="az-filter-label" for="az-filter-C">C</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-D">
+                                <label class="az-filter-label" for="az-filter-D">D</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-E">
+                                <label class="az-filter-label" for="az-filter-E">E</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-F">
+                                <label class="az-filter-label" for="az-filter-F">F</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-G">
+                                <label class="az-filter-label" for="az-filter-G">G</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-H">
+                                <label class="az-filter-label" for="az-filter-H">H</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-I">
+                                <label class="az-filter-label" for="az-filter-I">I</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-J">
+                                <label class="az-filter-label" for="az-filter-J">J</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-K">
+                                <label class="az-filter-label" for="az-filter-K">K</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-L">
+                                <label class="az-filter-label" for="az-filter-L">L</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-M">
+                                <label class="az-filter-label" for="az-filter-M">M</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-N">
+                                <label class="az-filter-label" for="az-filter-N">N</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-O">
+                                <label class="az-filter-label" for="az-filter-O">O</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-P">
+                                <label class="az-filter-label" for="az-filter-P">P</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-Q">
+                                <label class="az-filter-label" for="az-filter-Q">Q</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-R">
+                                <label class="az-filter-label" for="az-filter-R">R</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-S">
+                                <label class="az-filter-label" for="az-filter-S">S</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-T">
+                                <label class="az-filter-label" for="az-filter-T">T</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-U">
+                                <label class="az-filter-label" for="az-filter-U">U</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-V">
+                                <label class="az-filter-label" for="az-filter-V">V</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-W">
+                                <label class="az-filter-label" for="az-filter-W">W</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-X">
+                                <label class="az-filter-label" for="az-filter-X">X</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-Y">
+                                <label class="az-filter-label" for="az-filter-Y">Y</label>
+                            </div>
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="az-filter-Z">
+                                <label class="az-filter-label" for="az-filter-Z">Z</label>
+                            </div>
+                    </div>
                 </div>
                 <div class="list-container list-container-columns">
                     <ul class="list">
