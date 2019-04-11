@@ -113,7 +113,7 @@
 
                 p {
                     margin: 0;
-                    font-weight: bold;
+                    font-weight: $font-weight-medium;
                     @include font-size($lead-font-size);
                 }
             }
@@ -281,19 +281,6 @@
                                 padding-right: $card-spacer-x;
                             }
 
-                            h3 {
-                                .name, .specialty {
-                                    display: block;
-                                }
-                                
-                                .specialty {
-                                    font-size: 0.75em;
-                                    font-weight: $font-weight-normal;
-                                    color: $gray-600;
-                                    margin-top: 0.25em;
-                                }
-                            }
-
                             .rating {
                                 margin-bottom: 1.125rem;
                             }
@@ -405,50 +392,5 @@
             padding: 2px 7px;
             border-radius: $border-radius;
         }
-    }
-}
-
-.rating {
-    position: relative;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-
-    .star-ratings-sprite {
-        position: relative;
-        display: block;
-        width: 8rem;
-        padding: 0;
-        overflow: hidden;
-
-        &:before {
-            content: "";
-            display: block;
-            padding-top: 19.007793195210036%;
-            background-position: 0 0;
-            background-size: cover;
-            background-image: url("../svg/five-stars_sprite.svg");
-            background-repeat: no-repeat;
-        }
-        
-        .star-ratings-sprite-percentage {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-            background-position: 0 100%;
-            background-size: cover;
-            background-image: url("../svg/five-stars_sprite.svg");
-            background-repeat: no-repeat;
-            background-size: auto 200%;
-        }
-    }
-    .ratings-count {
-        @include font-size($font-size-sm);
-        line-height: 1;
-        margin-left: 0.5em;
     }
 }

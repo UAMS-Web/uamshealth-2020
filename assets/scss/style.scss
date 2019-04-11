@@ -14,9 +14,13 @@
 
 // UAMS Supporting Styles
 @import "uams-supporting/utilities/text";
+@import "uams-supporting/grid";
+@import "uams-supporting/layout";
 @import "uams-supporting/page";
 @import "uams-supporting/typography";
+@import "uams-supporting/buttons";
 @import "uams-supporting/forms";
+@import "uams-supporting/ratings";
 
 // Screen Reader Classes
 @import "supporting/screen-reader-text";
@@ -68,6 +72,10 @@
 
 // Doctors
 @import "uams-supporting/doctor-list";
+@import "uams-supporting/doctor-item";
+@import "uams-supporting/conditions-treatments";
+@import "uams-supporting/locations";
+@import "uams-supporting/cta-bar";
 
 // Footer Widgets
 @import "supporting/footer-widgets";

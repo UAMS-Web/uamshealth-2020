@@ -1,0 +1,19 @@
+.cta-bar {
+}
+
+.cta-bar-1 {
+
+    h2, p {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    h2 {
+        width: $line-length-50+em;
+    }
+    p {
+        @extend .lead;
+        width: $line-length-80+em;
+    }
+}
