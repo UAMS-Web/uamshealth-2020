@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "bootstrap": "4.3.1",
-    "jquery": "^3.3.1",
+    "jquery": "^4.0.0",
     "popper.js": "^1.14.7",
     "smartmenus": "^1.1.0",
     "smartmenus-bootstrap-4": "^0.1.0"
